@@ -10,6 +10,7 @@ int main() {
 	float ans[2];
 	float xMat[2][2];
 	float yMat[2][2];
+	char repile = 'w';
 	while (true) {
 		printf("From Ax+By = C\n");
 		printf("Enter A B C : ");
@@ -26,17 +27,28 @@ int main() {
 		yMat[1][1] = ans[1];
 		yMat[1][0] = factor[1][0];
 		if (det(factor) == 0) {
-			char repile[1];
-			printf("Answer Undefined\n Reset? (y/n) : ");
-			scanf("%s", &repile);
-			if (repile == "n") {
+			printf("Answer Undefined\n");
+			printf("Reset? (y/n) : ");
+			scanf(" %c", &repile);
+			if (repile == 'n') {
 				break;
+			}
+			else {
+				printf("\n");
 			}
 		}
 		else {
 			printf("x = %f, ", det(xMat) / det(factor));
-			printf("y = %f", det(yMat) / det(factor));
-			break;
+			printf("y = %f\n", det(yMat) / det(factor));
+			printf("Reset? (y/n) : ");
+			scanf(" %c", &repile);
+			printf("%c\n", repile);
+			if (repile == 'n') {
+				break;
+			}
+			else {
+				printf("\n");
+			}
 		}
 	}
 }
