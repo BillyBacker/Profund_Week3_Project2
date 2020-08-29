@@ -4,9 +4,7 @@
 float det(float In[2][2]) {
 	return In[1][0] * In[0][1] - In[0][0] * In[1][1];
 }
-void calculation() {
 
-}
 int main() {
 	float factor[2][2];
 	float ans[2];
