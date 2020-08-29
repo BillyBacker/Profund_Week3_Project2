@@ -13,14 +13,14 @@ int main() {
 	char repile = 'w';
 	while (true) {
 		printf("From Ax+By = C\n");
-		printf("Enter A B C : ");
+		printf("Enter A B C of first equation : ");
 		scanf("%f %f %f", &factor[0][0], &factor[0][1], &ans[0]);
 		xMat[0][0] = ans[0];
 		xMat[0][1] = factor[0][1];
 		yMat[0][1] = ans[0];
 		yMat[0][0] = factor[0][0];
 		printf("From Ax+By = C\n");
-		printf("Enter A B C : ");
+		printf("Enter A B C : of secound equation : ");
 		scanf("%f %f %f", &factor[1][0], &factor[1][1], &ans[1]);
 		xMat[1][0] = ans[1];
 		xMat[1][1] = factor[1][1];
